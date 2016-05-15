@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dating Website</title>
+    <style>
+      fieldset{
+        background: lightyellow;
+        border:10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+      }
+      label{
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+      }
+
+      input[type="radio"]+label,
+      input[type="checkbox"]+label{
+        width: auto;
+      }
+
+      .range-words-min{
+        width:80px;
+        display: inline-block;
+        text-align: center;
+        background-color: maroon;
+        color:white;
+      }
+      .range-words-max{
+        width:80px;
+        display: inline-block;
+        text-align: center;
+        background-color: purple;
+        color:white;
+      }
+      textarea{
+        width: 360px;
+        height: 50px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Please fill in the details for our Dating Website </h1>
+    <form class="" action="index.html" method="post"  enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>Your Face</legend>
+      <label for="yourimage">Your image: </label>
+      <input type="file" name="yourimage" id="yourimage" required><br>
+      <label for="preview">Image preview: </label>
+      <img src="" id="preview" alt="" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" required><br>
+      <label for="male">Gender: </label>
+      <input type="radio" name="gender" id="male"  value="male" required><label for="male">Male</label></input>
+      <input type="radio" name="gender" value="female" id="female" required><label for="female">Female</label></input><br>
+      <label for="age">Age: </label>
+      <input type="number" id= "age" name="age" value="18" required><br>
+      <label for="dob">Date of Birth: </label>
+      <input type="date" name="dob" id="dob" value=""><br>
+      <label for="favcolor">Favorite color: </label>
+      <input type="color" name="favcolor" id="favcolor" value=""><br>
+      <label for="country">Which Country: </label>
+      <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="sweden">Sweden</option>
+        <option value="usa">U.S.A</option>
+        <option value="china">China</option>
+        <option value="australia">Australia</option>
+        <option value="noselection">No Selection</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="height">Height: </label>
+      <span class="range-words-min">Short</span> <input id="height" type="range" min="0" max="100" name="height" value=""> <span class="range-words-max">Tall</span> <br>
+      <label for="salary">Salary: </label>
+      <span class="range-words-min">Poor</span> <input id="salary" type="range" min="0" max="100" name="salary" value=""> <span class="range-words-max">Rich</span>
+    </fieldset>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" value="" required><br>
+      <label for="mobile">Mobile:</label>
+      <input type="tel" name="mobile" id="mobile" value=""><br>
+      <label for="address">Address</label>
+      <textarea name="address" id="address"></textarea><br>
+      <label for="emails">Method to contact you:</label>
+      <input type="checkbox" name="contactmethod" id="emails" value="email"><label for="emails">Email</label></input>
+      <input type="checkbox" name="contactmethod" id="whatsapp" value="whatsapp"><label for="whatsapp">Whatsapp</label></input>
+      <input type="checkbox" name="contactmethod" id="inappchat" value="inappchat"><label for="inappchat">In-app chat</label></input>
+
+    </fieldset>
+    <input type="submit">
+    </form>
+  </body>
+</html>
