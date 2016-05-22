@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Color Guessing Game Assignment</title>
+  </head>
+  <body onload="do_game()">
+    <script type="text/javascript">
+      var colors=["red","blue","black","pink","cyan","green","aqua","yellow","purple","orange","brown","coral"];
+      function do_game(){
+        var random_number=Math.random()*12;
+        var random_number_integer=Math.floor(random_number);
+        var target=colors[random_number_integer];
+        alert(target);
+        var finished=false;
+        colors.sort();
+        while(!finished)
+        {
+          guess_input_text=prompt("I am thinking of these colors\n\n"+colors+"\n\nWhich color am I thinking of?");
+          if(guess_input_text==target)
+          {
+            finished=true;
+          }
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
